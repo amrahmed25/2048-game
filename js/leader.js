@@ -47,9 +47,11 @@
             const currentUserId = authData?.user?.id ?? null;
 
             const { data: rows, error } = await db
-                .from('leaderboard')
-                .select('*')
-                .order('rank', { ascending: true });
+            .from('leaderboard')
+            .select('*');
+
+            console.log('LEADERBOARD ROWS:', rows);
+            console.log('LEADERBOARD ERROR:', error);
 
             const tbody = document.getElementById('leaderboard-body');
 
