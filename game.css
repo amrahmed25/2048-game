@@ -17,7 +17,66 @@ body {
     padding: 20px;
     min-height: 100vh;
 }
+#stop-btn {
+    background: linear-gradient(135deg, #ff0055, #7a00ff);
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 8px 22px;
+    border: 2px solid #00f0ff;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 0 10px #00f0ff80;
+    text-transform: uppercase;
+    margin-right: 20px;
+    margin-left: 20px;
+}
 
+#stop-btn:hover {
+    background: linear-gradient(135deg, #ff007f, #00f0ff);
+    box-shadow: 0 0 18px #00f0ff;
+    transform: scale(1.05);
+}
+
+#continue-btn {
+    background: linear-gradient(135deg, #ff0055, #7a00ff);
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 8px 22px;
+    border: 2px solid #00f0ff;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 0 10px #00f0ff80;
+    text-transform: uppercase;
+}
+
+#continue-btn:hover {
+    background: linear-gradient(135deg, #ff007f, #00f0ff);
+    box-shadow: 0 0 18px #00f0ff;
+    transform: scale(1.05);
+}
+#end-btn {
+    background: linear-gradient(135deg, #ff0055, #7a00ff);
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 8px 22px;
+    border: 2px solid #00f0ff;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 0 10px #00f0ff80;
+    text-transform: uppercase;
+}
+
+#end-btn:hover {
+    background: linear-gradient(135deg, #ff007f, #00f0ff);
+    box-shadow: 0 0 18px #00f0ff;
+    transform: scale(1.05);
+}
 #title {
     font-size: 4.5rem;
     font-weight: 800;
