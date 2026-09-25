@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaderboard - 2048 Game</title>
+    <link rel="stylesheet" href="leader.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+</head>
+<body>
+
+    <div class="leaderboard-container">
+        <header class="leaderboard-header">
+            <h2>🏆 Global Leaderboard</h2>
+            <button class="btn btn-outline" onclick="location.href='dashboard.html'">⬅ Back to Dashboard</button>
+        </header>
+
+        <!-- Loading / error / empty state banner. Hidden unless needed. -->
+        <div id="leaderboard-message" style="display:none; padding:1rem;"></div>
+
+        <!-- Minimal, non-redesigning highlight for the current user's row. -->
+        <style>
+            tr.current-user-row { outline: 2px solid currentColor; outline-offset: -2px; }
+        </style>
+
+        <table id="leaderboard-table">
+            <thead>
+                <tr>
+                    <th>RANK</th>
+                    <th>INTERN</th>
+                    <th>TRACK</th>
+                    <th>COUNTRY</th>
+                    <th>MOVE</th>
+                    <th>POINTS</th>
+                </tr>
+            </thead>
+            <tbody id="leaderboard-body">
+                <!-- Rows are rendered from public.leaderboard by JS below. -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="js/leader.js"></script>
+</body>
+</html>

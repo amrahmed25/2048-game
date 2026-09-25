@@ -1,0 +1,135 @@
+:root {
+    --web-ground: #10061e;
+    --form-bg: rgba(23, 11, 41, 0.75);
+    --input-bg: rgba(16, 6, 30, 0.85);
+    --border-color: rgba(184, 107, 255, 0.3);
+    --button-color: #9d4edd;
+    --button-hover: #b86bff;
+    --text-color: #ffffff;
+    --text-sub: #d8b4fe;
+    --glow-color: rgba(184, 107, 255, 0.4);
+}
+
+body {
+    background-color: var(--web-ground);
+    background-image: url('./background.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: system-ui, -apple-system, sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+#containerForm {
+    background: rgba(20, 8, 35, 0.88);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(147, 51, 234, 0.25);
+    box-shadow: 0 0 35px rgba(107, 33, 168, 0.6), inset 0 0 15px rgba(168, 85, 247, 0.1);
+    border-radius: 14px;
+    padding: 35px 40px;
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+    color: #ffffff;
+}
+
+
+#greeting {
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 25px;
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(192, 132, 252, 0.5);
+}
+
+#containerFill {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.containerInput input {
+    width: 100%;
+    padding: 12px 15px;
+    background: rgba(12, 4, 22, 0.95);
+    border: 1px solid #581c87;
+    border-radius: 6px;
+    color: #ffffff;
+    font-size: 0.95rem;
+    outline: none;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.containerInput input::placeholder {
+    color: #9ca3af;
+}
+
+.containerInput input:focus {
+    border-color: #c084fc;
+    box-shadow: 0 0 12px rgba(192, 132, 252, 0.5);
+}
+
+
+#containerButton button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #9333ea 0%, #6b21a8 100%);
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(147, 51, 234, 0.4);
+    transition: all 0.3s ease;
+    text-transform: capitalize;
+}
+
+#containerButton button:hover {
+    background: linear-gradient(135deg, #a855f7 0%, #7e22ce 100%);
+    box-shadow: 0 6px 20px rgba(192, 132, 252, 0.6);
+    transform: translateY(-1px);
+}
+
+/* النصوص السفلية */
+#containerP {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #9ca3af;
+}
+
+#containerP span {
+    color: #d1d5db;
+}
+
+#containerP a {
+    color: #c084fc;
+    text-decoration: none;
+    margin-left: 5px;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+#containerP a:hover {
+    color: #e879f9;
+    text-decoration: underline;
+}
+
+
+#containerDiv {
+    position: absolute;
+    top: 20px;
+}
+
+#messageDiv.hidden {
+    display: none;
+}

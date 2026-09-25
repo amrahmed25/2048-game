@@ -1,0 +1,175 @@
+:root {
+    --bg-dark: #0f081c;
+    --panel-bg: rgba(30, 15, 50, 0.7);
+    --border-color: rgba(168, 85, 247, 0.3);
+    --accent: #a855f7;
+    --accent-hover: #c084fc;
+    --text: #ffffff;
+    --text-dim: #c084fc;
+    --gold: #f59e0b;
+    --silver: #cbd5e1;
+    --bronze: #d97706;
+}
+
+body {
+    background: var(--bg-dark) url('./background.jpeg') center/cover fixed no-repeat;
+    font-family: system-ui, -apple-system, sans-serif;
+    color: var(--text);
+    margin: 0;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+.leaderboard-container {
+    width: 100%;
+    max-width: 900px;
+    background: var(--panel-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.5rem;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.leaderboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.2rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.leaderboard-header h2 {
+    margin: 0;
+    font-size: 1.3rem;
+}
+
+.btn {
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    font-size: 0.85rem;
+    transition: all 0.2s ease;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-dim);
+}
+
+.btn-outline:hover {
+    background: rgba(168, 85, 247, 0.15);
+    color: var(--text);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+thead tr {
+    border-bottom: 1px solid var(--border-color);
+}
+
+th {
+    padding: 10px 12px;
+    color: var(--text-dim);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+tbody tr {
+    border-bottom: 1px solid rgba(168, 85, 247, 0.1);
+    transition: background 0.2s ease;
+}
+
+tbody tr:hover {
+    background: rgba(168, 85, 247, 0.1);
+}
+
+tbody tr:last-child {
+    border-bottom: none;
+}
+
+td {
+    padding: 12px;
+    vertical-align: middle;
+    font-size: 0.9rem;
+}
+
+.rank-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    font-weight: bold;
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-dim);
+    font-size: 0.85rem;
+}
+
+.rank-1 { background: var(--gold); color: #000; }
+.rank-2 { background: var(--silver); color: #000; }
+.rank-3 { background: var(--bronze); color: #fff; }
+
+.intern {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: rgba(168, 85, 247, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+}
+
+.intern-name {
+    font-weight: 600;
+}
+
+.track-tag {
+    background: rgba(168, 85, 247, 0.15);
+    color: var(--text-dim);
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    border: 1px solid rgba(168, 85, 247, 0.2);
+}
+
+.move {
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+.move.up { color: #10b981; }
+.move.down { color: #ef4444; }
+.move.same { color: #6b7280; }
+
+.points-text {
+    font-weight: 700;
+    color: var(--gold);
+}
+
+@media (max-width: 600px) {
+    th, td {
+        padding: 8px 6px;
+        font-size: 0.8rem;
+    }
+    .track-tag { display: none; }
+}

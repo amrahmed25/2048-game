@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <title>Login</title>
+</head>
+<body>
+    <div id="containerDiv">
+        <div id="messageDiv" class="hidden">
+            <p id="message"></p>
+        </div>
+    </div>
+    <div id="containerForm">
+        <form>
+            <h1 id="greeting">Welcome to 2048 Game</h1>
+            <div id="containerFill">
+                <div class="containerInput">
+                    <label for="name">Name</label><br>
+                    <input id="name" type="text" placeholder="Your Name" autofocus autocomplete="off"><br>
+                </div>
+                <div class="containerInput">
+                    <label class="text-white text-xl" for="email">Email</label><br>
+                    <input id="email" type="email" placeholder="Your Email" autocomplete="off"><br>
+                </div>
+                <div class="containerInput">
+                    <label class="text-white text-xl" for="password">Password</label><br>
+                    <input id="password" type="password" placeholder="Your Password" autocomplete="off"><br>
+                </div>
+            </div>
+            <div id="containerButton"> 
+                <button type="button" onclick="whenSubmit(event)">Submit</button>
+                <br> 
+            </div>
+            <div id="containerP">
+                <p><span>Don't have an account?</span><a href="index.html">Click Here</a></p>
+            </div>
+        </form>
+    </div>
+    <script src="js/auth.js"></script>
+</body>
+</html>

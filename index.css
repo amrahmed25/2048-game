@@ -1,0 +1,162 @@
+:root {
+    --web-ground: #10061e;
+    --form-bg: rgba(23, 11, 41, 0.75);
+    --input-bg: rgba(16, 6, 30, 0.85);
+    --border-color: rgba(184, 107, 255, 0.3);
+    --button-color: #9d4edd;
+    --button-hover: #b86bff;
+    --text-color: #ffffff;
+    --text-sub: #d8b4fe;
+    --glow-color: rgba(184, 107, 255, 0.4);
+}
+
+body {
+    background-color: var(--web-ground);
+    background-image: url('./background.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: system-ui, -apple-system, sans-serif;
+    margin: 0;
+}
+
+#containerDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hidden {
+    display: none;
+}
+
+#message {
+    color: var(--text-color);
+    font-size: 1.125rem;
+    padding: 0.5rem 1rem;
+    background: rgba(157, 78, 221, 0.2);
+    border: 1px solid var(--border-color);
+    border-radius: 0.5rem;
+    backdrop-filter: blur(5px);
+}
+
+#containerForm {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    min-height: 100vh;
+}
+
+form {
+    height: auto;
+    width: 22.5rem;
+    padding: 2rem 1.5rem;
+    border-radius: 1rem;
+    background-color: var(--form-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5), 0 0 20px var(--glow-color);
+}
+
+form h1 {
+    text-align: center;
+    color: var(--text-color);
+    font-size: 1.65rem;
+    font-weight: 700;
+    padding: 0.25rem 0 1rem 0;
+    text-shadow: 0 0 10px var(--glow-color);
+}
+
+#containerFill {
+    padding: 0.5rem 0 1.25rem 0;
+}
+
+.containerInput {
+    padding: 0.5rem 0;
+}
+
+label {
+    color: var(--text-sub);
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+input {
+    background-color: var(--input-bg); 
+    height: 2.75rem;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.5rem 0.75rem;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    margin: 0.35rem 0 0 0;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    border-color: var(--button-hover);
+    box-shadow: 0 0 10px var(--glow-color);
+}
+
+#containerButton {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+button {
+    height: 3rem;
+    width: 100%;
+    background-color: var(--button-color);
+    color: var(--text-color);
+    font-size: 1.125rem;
+    font-weight: 600;
+    padding: 0.25rem;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 0 15px var(--glow-color);
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--button-hover);
+    box-shadow: 0 0 25px rgba(184, 107, 255, 0.8);
+    transform: translateY(-2px);
+}
+
+#containerP {
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.5rem;
+}
+
+#containerP p {
+    color: var(--text-sub);
+    font-size: 0.95rem;
+}
+
+#containerP span {
+    opacity: 0.8; 
+}
+
+#containerP p a {
+    opacity: 1; 
+    padding-left: 0.5rem;
+    color: var(--button-hover);
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease;
+} 
+
+#containerP p a:hover {
+    color: #ffffff;
+    text-shadow: 0 0 8px var(--button-hover);
+}

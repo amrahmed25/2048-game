@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dashboard.css">
+    <title>2048 - Player Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+</head>
+<body>
+    <div class="dashboard-container">
+        <header class="card profile-bar">
+            <div class="user-info">
+                <div class="avatar" id="profile-avatar">🎮</div>
+                <div>
+                    <h2 id="profile-name">Player Profile</h2>
+                    <p>🔥 Current Streak: <b id="profile-streak">—</b></p>
+                </div>
+            </div>
+            <div class="quick-actions">
+                <button class="btn btn-primary" onclick="location.href='game.html'">🎮 New Game</button>
+                <button class="btn btn-outline" id="logout-btn">Logout</button>
+            </div>
+        </header>
+
+        <!-- Simple banner for errors / empty states. Hidden unless needed. -->
+        <div id="dashboard-message" class="card" style="display:none; padding:1rem; margin-bottom:1rem;"></div>
+
+        <section class="stats-grid">
+            <div class="card stat-card">
+                <span>🏆 BEST SCORE</span>
+                <h3 id="stat-best-score">—</h3>
+            </div>
+            <div class="card stat-card">
+                <span>🔢 HIGHEST TILE</span>
+                <h3 class="gold-text" id="stat-highest-tile">—</h3>
+            </div>
+            <div class="card stat-card">
+                <span>📊 GAMES PLAYED</span>
+                <h3 id="stat-games-played">—</h3>
+            </div>
+            <div class="card stat-card">
+                <span>🎯 WIN RATE</span>
+                <h3 id="stat-win-rate">—</h3>
+            </div>
+        </section>
+
+        <section class="middle-grid">
+            <div class="card game-preview-card">
+                <div class="card-header">
+                    <h3>🎮 Current Game</h3>
+                    <span class="score-badge" id="current-game-score">Score: —</span>
+                </div>
+                <div class="mini-grid" id="current-game-grid">
+                    <div class="tile empty"></div><div class="tile empty"></div><div class="tile empty"></div><div class="tile empty"></div>
+                    <div class="tile empty"></div><div class="tile empty"></div><div class="tile empty"></div><div class="tile empty"></div>
+                    <div class="tile empty"></div><div class="tile empty"></div><div class="tile empty"></div><div class="tile empty"></div>
+                    <div class="tile empty"></div><div class="tile empty"></div><div class="tile empty"></div><div class="tile empty"></div>
+                </div>
+                <button class="btn btn-primary w-full" style="margin-top: 1rem;" id="current-game-btn" onclick="location.href='game.html'">New Game</button>
+            </div>
+
+            <div class="card progress-card">
+                <div class="card-header">
+                    <h3>📊 Gameplay Details</h3>
+                </div>
+                <div class="sub-stats">
+                    <p><span>Games Won / Lost:</span> <b id="stat-won-lost">—</b></p>
+                    <p><span>Average Duration:</span> <b id="stat-avg-duration">—</b></p>
+                    <p><span>Most Reached Tile:</span> <b class="gold-text" id="stat-most-tile">—</b></p>
+                    <p><span>Total Playing Time:</span> <b id="stat-total-time">—</b></p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

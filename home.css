@@ -1,0 +1,110 @@
+:root {
+    --bg-dark: #0f081c;
+    --panel-bg: rgba(30, 15, 50, 0.7);
+    --border-color: rgba(168, 85, 247, 0.3);
+    --accent: #a855f7;
+    --accent-hover: #c084fc;
+    --text: #ffffff;
+    --text-dim: #c084fc;
+    --gold: #f59e0b;
+}
+
+body {
+    background: var(--bg-dark) url('./background.jpeg') center/cover fixed no-repeat;
+    font-family: system-ui, -apple-system, sans-serif;
+    color: var(--text);
+    margin: 0;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.home-container {
+    width: 100%;
+    max-width: 480px;
+    background: var(--panel-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 2.5rem 2rem;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+    text-align: center;
+}
+
+.game-title {
+    font-size: 4rem;
+    margin: 0;
+    font-weight: 900;
+    background: linear-gradient(135deg, #a855f7, #f59e0b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 2px;
+}
+
+.game-subtitle {
+    color: var(--text-dim);
+    font-size: 0.95rem;
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.menu-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    padding: 0.9rem 1.5rem;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    transition: all 0.25s ease;
+}
+
+.btn-primary {
+    background: var(--accent);
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(168, 85, 247, 0.4);
+}
+
+.btn-primary:hover {
+    background: var(--accent-hover);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text);
+}
+
+.btn-secondary:hover {
+    background: rgba(168, 85, 247, 0.15);
+    border-color: var(--accent);
+    transform: translateY(-2px);
+}
+
+.how-to-play {
+    border-top: 1px solid var(--border-color);
+    padding-top: 1.2rem;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.5;
+}
+
+.how-to-play h3 {
+    margin: 0 0 0.5rem 0;
+    color: var(--text-dim);
+    font-size: 1rem;
+}
+
+.how-to-play strong {
+    color: var(--gold);
+}
