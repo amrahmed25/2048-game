@@ -81,9 +81,9 @@
                             <span class="intern-name">${row.username || row.full_name || 'Player'}</span>
                         </div>
                     </td>
-                    <td><span class="track-tag">${row.track ?? '—'}</span></td>
+                    <td><span class="track-tag">${row.highest_tile ?? '—'}</span></td>
                     <td>${flag} ${row.country ?? '—'}</td>
-                    <td><span class="move same" title="Rank change data not available">—</span></td>
+                    <td><span class="move same">${row.moves_count ?? 0}</span></td>
                     <td class="points-text" title="${extraDetails}">${(row.best_score ?? 0).toLocaleString()}</td>
                 </tr>`;
             }).join('');
