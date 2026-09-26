@@ -1,5 +1,6 @@
-        const SUPABASE_URL = import.meta.env.SUPABASE_URL;
-        const SUPABASE_ANON_KEY = import.meta.env.SUPABASE_ANON_KEY;
+        const SUPABASE_URL = "https://rlzswdiltesxldwdzdlf.supabase.co";
+        const SUPABASE_ANON_KEY = "sb_publishable_fYbGrtavOW-foTMPxCKBbA_WxSCTrhE";
+
         const { createClient } = supabase;
         const db = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
         const FLAGS = {
