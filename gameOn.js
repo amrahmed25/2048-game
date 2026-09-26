@@ -1,10 +1,3 @@
-// ------------------------------------------------------------------
-// Supabase configuration — replace with your project's values.
-// Only the public "anon" key belongs here — never the service role key.
-// ------------------------------------------------------------------
- const SUPABASE_URL = "https://rlzswdiltesxldwdzdlf.supabase.co";
-       const SUPABASE_ANON_KEY = "sb_publishable_fYbGrtavOW-foTMPxCKBbA_WxSCTrhE";
-
 const { createClient } = supabase;
 const db = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
