@@ -136,7 +136,7 @@
                     `Score: ${(currentGame.score ?? 0).toLocaleString()}`;
                 renderBoard(currentGame.board);
                 btn.textContent = 'Continue Game';
-                btn.onclick = () => { location.href = `game.html?gameId=${currentGame.id}`; };
+                btn.onclick = () => { location.href = `gameOn.html?gameId=${currentGame.id}`; };
             } else {
                 // No active game — empty state.
                 document.getElementById('current-game-score').textContent = 'No active game';
