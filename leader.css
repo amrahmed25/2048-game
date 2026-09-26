@@ -164,7 +164,12 @@ td {
 }
 .move.up { color: #10b981; }
 .move.down { color: #ef4444; }
-.move.same { color: #6b7280; }
+.move.same { background: rgba(168, 85, 247, 0.15);
+    color: var(--text-dim);
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    border: 1px solid rgba(168, 85, 247, 0.2); }
 
 .points-text {
     font-weight: 700;
