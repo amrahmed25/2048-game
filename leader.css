@@ -69,8 +69,13 @@ body {
     color: var(--text);
 }
 
+.leaderboard-container {
+    overflow-x: auto;
+}
+
 table {
     width: 100%;
+    min-width: 480px;
     border-collapse: collapse;
     text-align: left;
 }

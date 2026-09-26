@@ -16,6 +16,11 @@ body {
     margin: 0;
     padding: 20px;
     min-height: 100vh;
+    box-sizing: border-box;
+    /* prevent the page itself from scrolling sideways on small screens */
+    overflow-x: hidden;
+    /* let touch swipes on the board work without triggering page scroll/zoom */
+    touch-action: none;
 }
 #stop-btn {
     background: linear-gradient(135deg, #ff0055, #7a00ff);
@@ -78,7 +83,7 @@ body {
     transform: scale(1.05);
 }
 #title {
-    font-size: 4.5rem;
+    font-size: clamp(2.2rem, 10vw, 4.5rem);
     font-weight: 800;
     margin: 10px 0 0 0;
     background: linear-gradient(180deg, #fff7ad 0%, #ffa800 60%, #c66900 100%);
@@ -91,7 +96,8 @@ body {
 hr {
     border: none;
     height: 2px;
-    width: 400px;
+    width: 100%;
+    max-width: 400px;
     background: linear-gradient(90deg, transparent, #ec4899, #3b82f6, transparent);
     margin: 10px auto 15px auto;
 }
@@ -113,8 +119,9 @@ h2 {
 }
 
 #board {
-    width: 420px;
-    height: 420px;
+    /* scales down on narrow screens instead of overflowing, caps at 420px on larger ones */
+    width: min(420px, 92vw);
+    height: min(420px, 92vw);
     background-color: #232733;
     border-radius: 20px;
     border: 3px solid #00f0ff;
@@ -126,15 +133,18 @@ h2 {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(4, 1fr);
-    gap: 12px;
-    padding: 14px;
+    gap: min(12px, 2.5vw);
+    padding: min(14px, 3vw);
+    box-sizing: border-box;
+    /* stops the browser from turning swipes on the board into scroll/zoom gestures */
+    touch-action: none;
 }
 
 .tile {
     width: 100%;
     height: 100%;
     border-radius: 14px;
-    font-size: 28px;
+    font-size: clamp(16px, 5.5vw, 28px);
     font-weight: 800;
     display: flex;
     justify-content: center;
@@ -205,7 +215,7 @@ h2 {
 .x1024 {
     background: linear-gradient(180deg, #2ae38e 0%, #0f9b5b 100%);
     color: #ffffff;
-    font-size: 24px;
+    font-size: clamp(13px, 4.5vw, 24px);
     border: 1px solid rgba(255, 255, 255, 0.5);
     box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.5);
 }
@@ -213,7 +223,7 @@ h2 {
 .x2048 {
     background: linear-gradient(180deg, #ffe156 0%, #d99100 100%);
     color: #ffffff;
-    font-size: 24px;
+    font-size: clamp(13px, 4.5vw, 24px);
     border: 2px solid #fff6a1;
     box-shadow: 
         0 0 20px #ffc107, 
@@ -225,7 +235,7 @@ h2 {
 .x4096 {
     background: linear-gradient(180deg, #f452ff 0%, #a200ad 100%);
     color: #ffffff;
-    font-size: 24px;
+    font-size: clamp(13px, 4.5vw, 24px);
     border: 1px solid rgba(255, 255, 255, 0.5);
     box-shadow: 0 0 15px #f452ff;
 }
@@ -233,7 +243,7 @@ h2 {
 .x8192 {
     background: linear-gradient(180deg, #2c3243 0%, #0d1017 100%);
     color: #ffffff;
-    font-size: 24px;
+    font-size: clamp(13px, 4.5vw, 24px);
     border: 1px solid #38bdf8;
     box-shadow: 0 0 15px #38bdf8;
 }

@@ -19,6 +19,8 @@ body {
     background-attachment: fixed;
     font-family: system-ui, -apple-system, sans-serif;
     margin: 0;
+    padding: 0 16px;
+    box-sizing: border-box;
 }
 
 #containerDiv {
@@ -50,7 +52,8 @@ body {
 
 form {
     height: auto;
-    width: 22.5rem;
+    width: 100%;
+    max-width: 22.5rem;
     padding: 2rem 1.5rem;
     border-radius: 1rem;
     background-color: var(--form-bg);

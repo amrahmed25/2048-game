@@ -115,24 +115,10 @@ if (!boardsAreEqual(prevBoard, board)) {
 })
 
 
-document.addEventListener('mousedown', (e) => {
-    if(isPaused) return;
-    isMouseDown = true;
-    startX = e.clientX;
-    startY = e.clientY;
-});
-
-document.addEventListener('mouseup', (e) => {
-    if (isPaused || !isMouseDown) return;
-    isMouseDown = false;
-
-    endX = e.clientX;
-    endY = e.clientY;
-
+function handleSwipeEnd() {
     let diffX = endX - startX;
     let diffY = endY - startY;
 
-    
     let minDistance = 30;
     let prevBoard = JSON.parse(JSON.stringify(board));
 
@@ -161,7 +147,44 @@ document.addEventListener('mouseup', (e) => {
         if (scoreElem) scoreElem.innerText = score;
         checkGameOver();
     }
+}
+
+document.addEventListener('mousedown', (e) => {
+    if(isPaused) return;
+    isMouseDown = true;
+    startX = e.clientX;
+    startY = e.clientY;
 });
+
+document.addEventListener('mouseup', (e) => {
+    if (isPaused || !isMouseDown) return;
+    isMouseDown = false;
+    endX = e.clientX;
+    endY = e.clientY;
+    handleSwipeEnd();
+});
+
+// Touch support (mobile swipe) — mirrors the mouse drag logic above.
+document.addEventListener('touchstart', (e) => {
+    if (isPaused) return;
+    isMouseDown = true;
+    startX = e.touches[0].clientX;
+    startY = e.touches[0].clientY;
+}, { passive: true });
+
+document.addEventListener('touchmove', (e) => {
+    if (isPaused || !isMouseDown) return;
+    // Prevent the page from scrolling while swiping on the board
+    e.preventDefault();
+}, { passive: false });
+
+document.addEventListener('touchend', (e) => {
+    if (isPaused || !isMouseDown) return;
+    isMouseDown = false;
+    endX = e.changedTouches[0].clientX;
+    endY = e.changedTouches[0].clientY;
+    handleSwipeEnd();
+}, { passive: true });
 
 function filterZero(row) {
     return row.filter(num => num != 0) // creates a different array that removes the zero and the number will replace the position of that zero
