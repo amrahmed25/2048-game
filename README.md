@@ -123,9 +123,9 @@ These statistics help players monitor their progress and improve their performan
 
 ## 🌐 Live Demo
 
-**Play the game:** [Add your deployed website URL here]
+**Play the game:** [(https://2048-game-ten-iota.vercel.app/)]
 
-**Source Code:** [Add your GitHub repository URL here]
+**Source Code:** [(https://github.com/amrahmed25/2048-game)]
 
 ## 🔒 Security
 
